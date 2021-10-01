@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sZl-dy-IfS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sZl-dy-IfS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,11 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-nh-oAm">
-                                <rect key="frame" x="51" y="795" width="309" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the best Onboarding you've ever seen" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-yp-8F2">
+                                <rect key="frame" x="52" y="689" width="310.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="onboarding_label"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-nh-oAm">
+                                <rect key="frame" x="52" y="790" width="310.5" height="40"/>
                                 <color key="backgroundColor" name="onboarding_button"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="fH8-9E-owG"/>
+                                    <constraint firstAttribute="height" constant="40" id="uSx-3N-gaw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Done">
@@ -31,34 +36,20 @@
                                     <action selector="doneButtonPressed:" destination="sZl-dy-IfS" eventType="touchUpInside" id="Gf6-iG-Bvi"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qyt-fl-NpG">
-                                <rect key="frame" x="190" y="590" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-yp-8F2">
-                                <rect key="frame" x="51" y="690" width="313" height="58"/>
-                                <string key="text">This the best
-Onboarding you've ever seen</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" name="onboarding_label"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="e3C-ff-7Cc"/>
                         <color key="backgroundColor" name="onboarding_background"/>
                         <constraints>
-                            <constraint firstItem="8sX-yp-8F2" firstAttribute="width" secondItem="4FS-nh-oAm" secondAttribute="width" id="BYT-h3-O9F"/>
-                            <constraint firstItem="4FS-nh-oAm" firstAttribute="width" secondItem="Mpn-qU-36a" secondAttribute="width" multiplier="0.75" id="KUI-iS-Xtg"/>
-                            <constraint firstItem="e3C-ff-7Cc" firstAttribute="bottom" secondItem="4FS-nh-oAm" secondAttribute="bottom" constant="32" id="er2-6J-r2D"/>
-                            <constraint firstItem="8sX-yp-8F2" firstAttribute="centerX" secondItem="e3C-ff-7Cc" secondAttribute="centerX" id="j0H-Z6-Aui"/>
-                            <constraint firstItem="4FS-nh-oAm" firstAttribute="centerX" secondItem="e3C-ff-7Cc" secondAttribute="centerX" id="vje-fN-Um4"/>
-                            <constraint firstItem="4FS-nh-oAm" firstAttribute="top" secondItem="8sX-yp-8F2" secondAttribute="bottom" constant="48" id="zwy-bd-gk9"/>
+                            <constraint firstItem="e3C-ff-7Cc" firstAttribute="bottom" secondItem="4FS-nh-oAm" secondAttribute="bottom" constant="32" id="E5B-0Z-uXb"/>
+                            <constraint firstItem="8sX-yp-8F2" firstAttribute="centerX" secondItem="e3C-ff-7Cc" secondAttribute="centerX" id="EKr-Qu-5P3"/>
+                            <constraint firstItem="4FS-nh-oAm" firstAttribute="centerX" secondItem="e3C-ff-7Cc" secondAttribute="centerX" id="bPO-Pj-4Vx"/>
+                            <constraint firstItem="4FS-nh-oAm" firstAttribute="width" secondItem="Mpn-qU-36a" secondAttribute="width" multiplier="0.75" id="fPg-ZU-oKN"/>
+                            <constraint firstItem="4FS-nh-oAm" firstAttribute="top" secondItem="8sX-yp-8F2" secondAttribute="bottom" constant="48" id="prA-Za-dw2"/>
+                            <constraint firstItem="8sX-yp-8F2" firstAttribute="width" secondItem="4FS-nh-oAm" secondAttribute="width" id="u3y-qp-nih"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="e3C-ff-7Cc"/>
                     </view>
                     <connections>
-                        <outlet property="doneButton" destination="4FS-nh-oAm" id="QYc-td-UOk"/>
+                        <outlet property="doneButton" destination="4FS-nh-oAm" id="Ll2-Y7-KWZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpX-6o-sFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
