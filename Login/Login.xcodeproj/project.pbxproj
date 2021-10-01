@@ -19,6 +19,7 @@
 		5747FA4026F61AAA00AAB8B2 /* HomeXIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5747FA3F26F61AAA00AAB8B2 /* HomeXIBViewController.xib */; };
 		5747FA4226F6209500AAB8B2 /* LoginXIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5747FA4126F6209500AAB8B2 /* LoginXIBViewController.xib */; };
 		5747FA4826F65B7500AAB8B2 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5747FA4726F65B7500AAB8B2 /* Onboarding.storyboard */; };
+		57B7118D2707C4FE008BBCC9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7118C2707C4FE008BBCC9 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5747FA3F26F61AAA00AAB8B2 /* HomeXIBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeXIBViewController.xib; sourceTree = "<group>"; };
 		5747FA4126F6209500AAB8B2 /* LoginXIBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginXIBViewController.xib; sourceTree = "<group>"; };
 		5747FA4726F65B7500AAB8B2 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		57B7118C2707C4FE008BBCC9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				5747FA3126F5532800AAB8B2 /* LaunchScreen.storyboard */,
 				5747FA3426F5532800AAB8B2 /* Info.plist */,
 				5747FA3B26F5607E00AAB8B2 /* Segues.swift */,
+				57B7118C2707C4FE008BBCC9 /* AppCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				5747FA2726F5532600AAB8B2 /* AppDelegate.swift in Sources */,
 				5747FA2926F5532600AAB8B2 /* SceneDelegate.swift in Sources */,
 				5747FA3C26F5607E00AAB8B2 /* Segues.swift in Sources */,
+				57B7118D2707C4FE008BBCC9 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
