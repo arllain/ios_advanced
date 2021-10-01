@@ -18,11 +18,15 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInWithXibButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
     var isXIB = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNotification()
+        signInWithXibButton.layer.cornerRadius = 4
+        signInButton.layer.cornerRadius = 4
     }
     
     override func viewDidAppear(_ animated: Bool) {
