@@ -19,6 +19,14 @@ final class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLayout()
+    }
+}
+
+private extension OnboardingViewController {
+    
+    func configureLayout() {
+        view.backgroundColor = UIColor(named: "onboarding_background")
     }
 }
 
