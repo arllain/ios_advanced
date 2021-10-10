@@ -55,7 +55,16 @@ private extension OnboardingViewController {
         titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.90).isActive = true
         
+        let subTitleLabel = UILabel()
+        subTitleLabel.text = "We Use 100% pure Metals"
+        subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subTitleLabel.textAlignment = .center
+        subTitleLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        subTitleLabel.textColor = UIColor(named: "subtitle_color")
         
+        container.addSubview(subTitleLabel)
+        subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
+        subTitleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
     }
 }
 
