@@ -36,8 +36,6 @@ private extension OnboardingViewController {
         view.addSubview(container)
         container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
         container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        
-        container.heightAnchor.constraint(equalToConstant: 300).isActive = true
         container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
         
         container.layer.cornerRadius = 25
@@ -53,18 +51,29 @@ private extension OnboardingViewController {
         container.addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.90).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.9).isActive = true
         
         let subTitleLabel = UILabel()
         subTitleLabel.text = "We Use 100% pure Metals"
         subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subTitleLabel.textAlignment = .center
-        subTitleLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        subTitleLabel.font = .systemFont(ofSize: 14)
         subTitleLabel.textColor = UIColor(named: "subtitle_color")
         
         container.addSubview(subTitleLabel)
         subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
         subTitleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        
+        let nextButtonImageView = UIImageView(image: UIImage(named: "onboarding_next_button"))
+        nextButtonImageView.translatesAutoresizingMaskIntoConstraints = false
+        nextButtonImageView.contentMode = .scaleToFill
+        
+        container.addSubview(nextButtonImageView)
+        nextButtonImageView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        nextButtonImageView.widthAnchor.constraint(equalToConstant: 85).isActive = true
+        nextButtonImageView.heightAnchor.constraint(equalToConstant: 85).isActive = true
+        nextButtonImageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 16).isActive = true
+        nextButtonImageView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -8).isActive = true
     }
 }
 
