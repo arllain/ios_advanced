@@ -66,7 +66,7 @@ private extension OnboardingViewController {
         
         let nextButtonImageView = UIImageView(image: UIImage(named: "onboarding_next_button"))
         nextButtonImageView.translatesAutoresizingMaskIntoConstraints = false
-        nextButtonImageView.contentMode = .scaleToFill
+        nextButtonImageView.contentMode = .scaleAspectFill
         
         container.addSubview(nextButtonImageView)
         nextButtonImageView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
@@ -77,7 +77,7 @@ private extension OnboardingViewController {
 
         let jewelleryImageView = UIImageView(image: UIImage(named: "jewellery_image"))
         jewelleryImageView.translatesAutoresizingMaskIntoConstraints = false
-        jewelleryImageView.contentMode = .scaleToFill
+        jewelleryImageView.contentMode = .scaleAspectFill
         
         view.addSubview(jewelleryImageView)
         jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
