@@ -27,6 +27,20 @@ private extension OnboardingViewController {
     
     func configureLayout() {
         view.backgroundColor = UIColor(named: "onboarding_background")
+        
+        let container = UIView()
+        container.backgroundColor = UIColor(named: "onboarding_card_backgroud")
+        container.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        view.addSubview(container)
+        container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
+        container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        
+        container.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
+        
+        container.layer.cornerRadius = 25
     }
 }
 
