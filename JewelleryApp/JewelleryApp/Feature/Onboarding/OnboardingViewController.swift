@@ -41,6 +41,21 @@ private extension OnboardingViewController {
         container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
         
         container.layer.cornerRadius = 25
+        
+        let titleLabel = UILabel()
+        titleLabel.text = "The best jewellery in The Town Now!"
+        titleLabel.numberOfLines = 0
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
+        titleLabel.textColor = UIColor(named: "title_color")
+        
+        container.addSubview(titleLabel)
+        titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.90).isActive = true
+        
+        
     }
 }
 
