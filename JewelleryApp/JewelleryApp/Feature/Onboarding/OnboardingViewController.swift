@@ -74,6 +74,16 @@ private extension OnboardingViewController {
         nextButtonImageView.heightAnchor.constraint(equalToConstant: 85).isActive = true
         nextButtonImageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 16).isActive = true
         nextButtonImageView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -8).isActive = true
+
+        let jewelleryImageView = UIImageView(image: UIImage(named: "jewellery_image"))
+        jewelleryImageView.translatesAutoresizingMaskIntoConstraints = false
+        jewelleryImageView.contentMode = .scaleToFill
+        
+        view.addSubview(jewelleryImageView)
+        jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
+        jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        jewelleryImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }
 
