@@ -41,14 +41,14 @@ final class OnboardingViewController: UIViewController {
     private var nextButtonImageView: UIImageView = {
         let nextButtonImageView = UIImageView(image: UIImage(named: "onboarding_next_button"))
         nextButtonImageView.translatesAutoresizingMaskIntoConstraints = false
-        nextButtonImageView.contentMode = .scaleAspectFill
+        nextButtonImageView.contentMode = .scaleAspectFit
         return nextButtonImageView
     }()
     
     private var jewelleryImageView: UIImageView = {
         let jewelleryImageView = UIImageView(image: UIImage(named: "jewellery_image"))
         jewelleryImageView.translatesAutoresizingMaskIntoConstraints = false
-        jewelleryImageView.contentMode = .scaleAspectFill
+        jewelleryImageView.contentMode = .scaleAspectFit
         return jewelleryImageView
     }()
     
@@ -62,12 +62,38 @@ final class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureLayout()
-        
+        configureStackView()
     }
 }
 
 private extension OnboardingViewController {
+    
+    func configureStackView() {
+        view.backgroundColor = UIColor(named: "onboarding_background")
+        
+        view.addSubview(container)
+        container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
+        container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
+        
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel, nextButtonImageView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.setCustomSpacing(16, after: subTitleLabel)
+        
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        container.addSubview(stackView)
+        
+        stackView.constrainToSuperviewSafeAreaEdges(.initializer(top: 16, left: 16, bottom: 0, right: 16))
+        nextButtonImageView.widthAnchor.constraint(equalToConstant: 85).isActive = true
+        nextButtonImageView.heightAnchor.constraint(equalToConstant: 85).isActive = true
+        
+        view.addSubview(jewelleryImageView)
+        jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
+        jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        jewelleryImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
     
     func configureLayout() {
         view.backgroundColor = UIColor(named: "onboarding_background")
