@@ -13,6 +13,7 @@ final class OnboardingViewController: UIViewController {
         let container = UIView()
         container.backgroundColor = UIColor(named: "onboarding_card_backgroud")
         container.translatesAutoresizingMaskIntoConstraints = false
+        container.layer.cornerRadius = 25
         return container
     }()
     
@@ -62,12 +63,11 @@ final class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
+        
     }
 }
 
 private extension OnboardingViewController {
-    
-    
     
     func configureLayout() {
         view.backgroundColor = UIColor(named: "onboarding_background")
@@ -76,8 +76,6 @@ private extension OnboardingViewController {
         container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
         container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
-        
-        container.layer.cornerRadius = 25
         
         container.addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30).isActive = true
