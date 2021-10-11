@@ -9,6 +9,48 @@ import UIKit
 
 final class OnboardingViewController: UIViewController {
     
+    private var container: UIView = {
+        let container = UIView()
+        container.backgroundColor = UIColor(named: "onboarding_card_backgroud")
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
+    }()
+    
+    private var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.text = "The best jewellery in The Town Now!"
+        titleLabel.numberOfLines = 0
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
+        titleLabel.textColor = UIColor(named: "title_color")
+        return titleLabel
+    }()
+    
+    private var subTitleLabel: UILabel = {
+        let subTitleLabel = UILabel()
+        subTitleLabel.text = "We Use 100% pure Metals"
+        subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subTitleLabel.textAlignment = .center
+        subTitleLabel.font = .systemFont(ofSize: 14)
+        subTitleLabel.textColor = UIColor(named: "subtitle_color")
+        return subTitleLabel
+    }()
+    
+    private var nextButtonImageView: UIImageView = {
+        let nextButtonImageView = UIImageView(image: UIImage(named: "onboarding_next_button"))
+        nextButtonImageView.translatesAutoresizingMaskIntoConstraints = false
+        nextButtonImageView.contentMode = .scaleAspectFill
+        return nextButtonImageView
+    }()
+    
+    private var jewelleryImageView: UIImageView = {
+        let jewelleryImageView = UIImageView(image: UIImage(named: "jewellery_image"))
+        jewelleryImageView.translatesAutoresizingMaskIntoConstraints = false
+        jewelleryImageView.contentMode = .scaleAspectFill
+        return jewelleryImageView
+    }()
+    
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,13 +67,10 @@ final class OnboardingViewController: UIViewController {
 
 private extension OnboardingViewController {
     
+    
+    
     func configureLayout() {
         view.backgroundColor = UIColor(named: "onboarding_background")
-        
-        let container = UIView()
-        container.backgroundColor = UIColor(named: "onboarding_card_backgroud")
-        container.translatesAutoresizingMaskIntoConstraints = false
-        
         
         view.addSubview(container)
         container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
@@ -40,33 +79,14 @@ private extension OnboardingViewController {
         
         container.layer.cornerRadius = 25
         
-        let titleLabel = UILabel()
-        titleLabel.text = "The best jewellery in The Town Now!"
-        titleLabel.numberOfLines = 0
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textAlignment = .center
-        titleLabel.font = .systemFont(ofSize: 28, weight: .bold)
-        titleLabel.textColor = UIColor(named: "title_color")
-        
         container.addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.9).isActive = true
         
-        let subTitleLabel = UILabel()
-        subTitleLabel.text = "We Use 100% pure Metals"
-        subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subTitleLabel.textAlignment = .center
-        subTitleLabel.font = .systemFont(ofSize: 14)
-        subTitleLabel.textColor = UIColor(named: "subtitle_color")
-        
         container.addSubview(subTitleLabel)
         subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
         subTitleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
-        
-        let nextButtonImageView = UIImageView(image: UIImage(named: "onboarding_next_button"))
-        nextButtonImageView.translatesAutoresizingMaskIntoConstraints = false
-        nextButtonImageView.contentMode = .scaleAspectFill
         
         container.addSubview(nextButtonImageView)
         nextButtonImageView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
@@ -75,10 +95,6 @@ private extension OnboardingViewController {
         nextButtonImageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 16).isActive = true
         nextButtonImageView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -8).isActive = true
 
-        let jewelleryImageView = UIImageView(image: UIImage(named: "jewellery_image"))
-        jewelleryImageView.translatesAutoresizingMaskIntoConstraints = false
-        jewelleryImageView.contentMode = .scaleAspectFill
-        
         view.addSubview(jewelleryImageView)
         jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
         jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
