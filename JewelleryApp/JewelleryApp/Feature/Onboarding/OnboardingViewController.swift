@@ -80,7 +80,7 @@ private extension OnboardingViewController {
         mainContainerStackView.constrainToSuperviewSafeAreaAxis()
         
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel, nextButtonImageView])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false 
 
         stackView.setCustomSpacing(16, after: subTitleLabel)
         stackView.axis = .vertical
