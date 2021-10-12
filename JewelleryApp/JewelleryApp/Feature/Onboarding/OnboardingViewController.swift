@@ -72,10 +72,19 @@ private extension OnboardingViewController {
         view.backgroundColor = UIColor(named: "onboarding_background")
         
         view.addSubview(container)
-        container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
-        container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
-        
+       
+        if UIDevice.current.userInterfaceIdiom  == .pad {
+//            container.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 10).isActive = true
+//            container.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor, constant: -10).isActive = true
+            container.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
+            container.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
+        }else {
+            container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
+            container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+            container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
+        }
+    
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel, nextButtonImageView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.setCustomSpacing(16, after: subTitleLabel)
@@ -90,7 +99,11 @@ private extension OnboardingViewController {
         
         view.addSubview(jewelleryImageView)
         jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
-        jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        if UIDevice.current.userInterfaceIdiom  == .pad {
+            jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6 ).isActive = true
+        } else {
+            jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        }
         jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         jewelleryImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
