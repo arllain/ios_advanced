@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingViewController: UIViewController {
     
-    private var container: UIView = {
+    private var cardContainer: UIView = {
         let container = UIView()
         container.backgroundColor = UIColor(named: "onboarding_card_backgroud")
         container.translatesAutoresizingMaskIntoConstraints = false
@@ -71,69 +71,57 @@ private extension OnboardingViewController {
     func configureStackView() {
         view.backgroundColor = UIColor(named: "onboarding_background")
         
-        view.addSubview(container)
-       
-        if UIDevice.current.userInterfaceIdiom  == .pad {
-//            container.leadingAnchor.constraint(equalTo: view.readableContentGuide.leadingAnchor, constant: 10).isActive = true
-//            container.trailingAnchor.constraint(equalTo: view.readableContentGuide.trailingAnchor, constant: -10).isActive = true
-            container.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
-            container.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
-        }else {
-            container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
-            container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-            container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
-        }
-    
+        let mainContainerStackView = UIStackView(arrangedSubviews: [jewelleryImageView, cardContainer])
+        mainContainerStackView.translatesAutoresizingMaskIntoConstraints = false
+        mainContainerStackView.spacing = 0
+        mainContainerStackView.axis = .vertical
+
+        view.addSubview(mainContainerStackView)
+        mainContainerStackView.constrainToSuperviewSafeAreaAxis()
+        
         let stackView = UIStackView(arrangedSubviews: [titleLabel, subTitleLabel, nextButtonImageView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
+
         stackView.setCustomSpacing(16, after: subTitleLabel)
-        
         stackView.axis = .vertical
         stackView.spacing = 8
-        container.addSubview(stackView)
+        cardContainer.addSubview(stackView)
         
         stackView.constrainToSuperviewSafeAreaEdges(.initializer(top: 16, left: 16, bottom: 0, right: 16))
         nextButtonImageView.widthAnchor.constraint(equalToConstant: 85).isActive = true
         nextButtonImageView.heightAnchor.constraint(equalToConstant: 85).isActive = true
         
-        view.addSubview(jewelleryImageView)
-        jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
-        if UIDevice.current.userInterfaceIdiom  == .pad {
-            jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6 ).isActive = true
-        } else {
-            jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        }
-        jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        jewelleryImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        let multiplier = UIDevice.current.userInterfaceIdiom  == .pad ? 0.6 : 0.95
+        jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier ).isActive = true
+        jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: multiplier ).isActive = true
     }
     
     func configureLayout() {
         view.backgroundColor = UIColor(named: "onboarding_background")
         
-        view.addSubview(container)
-        container.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
-        container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        container.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
+        view.addSubview(cardContainer)
+        cardContainer.leadingAnchor.constraint(equalTo:  view.leadingAnchor, constant: 10).isActive = true
+        cardContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        cardContainer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
         
-        container.addSubview(titleLabel)
-        titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 30).isActive = true
-        titleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
-        titleLabel.widthAnchor.constraint(equalTo: container.widthAnchor, multiplier: 0.9).isActive = true
+        cardContainer.addSubview(titleLabel)
+        titleLabel.topAnchor.constraint(equalTo: cardContainer.topAnchor, constant: 30).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: cardContainer.centerXAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalTo: cardContainer.widthAnchor, multiplier: 0.9).isActive = true
         
-        container.addSubview(subTitleLabel)
+        cardContainer.addSubview(subTitleLabel)
         subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
-        subTitleLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        subTitleLabel.centerXAnchor.constraint(equalTo: cardContainer.centerXAnchor).isActive = true
         
-        container.addSubview(nextButtonImageView)
-        nextButtonImageView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+        cardContainer.addSubview(nextButtonImageView)
+        nextButtonImageView.centerXAnchor.constraint(equalTo: cardContainer.centerXAnchor).isActive = true
         nextButtonImageView.widthAnchor.constraint(equalToConstant: 85).isActive = true
         nextButtonImageView.heightAnchor.constraint(equalToConstant: 85).isActive = true
         nextButtonImageView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 16).isActive = true
-        nextButtonImageView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -8).isActive = true
+        nextButtonImageView.bottomAnchor.constraint(equalTo: cardContainer.bottomAnchor, constant: -8).isActive = true
 
         view.addSubview(jewelleryImageView)
-        jewelleryImageView.bottomAnchor.constraint(equalTo: container.topAnchor).isActive = true
+        jewelleryImageView.bottomAnchor.constraint(equalTo: cardContainer.topAnchor).isActive = true
         jewelleryImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         jewelleryImageView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         jewelleryImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
