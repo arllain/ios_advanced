@@ -23,7 +23,6 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
 
     override func awakeFromNib() {
-        super.awakeFromNib()
         containerView.layer.cornerRadius = 32
         priceLabel.layer.cornerRadius = 9
     }
