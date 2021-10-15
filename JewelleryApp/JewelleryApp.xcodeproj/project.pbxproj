@@ -19,6 +19,7 @@
 		57A6EDED2715DDDA003F0BF3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A6EDEC2715DDDA003F0BF3 /* HomeViewController.xib */; };
 		57A6EDF12715FACE003F0BF3 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6EDEF2715FACE003F0BF3 /* CardCollectionViewCell.swift */; };
 		57A6EDF22715FACE003F0BF3 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A6EDF02715FACE003F0BF3 /* CardCollectionViewCell.xib */; };
+		57AA4A752718FFF3004884A7 /* OnboardingLandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA4A742718FFF3004884A7 /* OnboardingLandscapeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		57A6EDEC2715DDDA003F0BF3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		57A6EDEF2715FACE003F0BF3 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		57A6EDF02715FACE003F0BF3 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		57AA4A742718FFF3004884A7 /* OnboardingLandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLandscapeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				57A039D72713496F0028A381 /* OnboardingViewController.swift */,
+				57AA4A742718FFF3004884A7 /* OnboardingLandscapeViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				57A6EDF12715FACE003F0BF3 /* CardCollectionViewCell.swift in Sources */,
 				57A039D82713496F0028A381 /* OnboardingViewController.swift in Sources */,
 				57A6EDE62715C568003F0BF3 /* HomeViewController.swift in Sources */,
+				57AA4A752718FFF3004884A7 /* OnboardingLandscapeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
