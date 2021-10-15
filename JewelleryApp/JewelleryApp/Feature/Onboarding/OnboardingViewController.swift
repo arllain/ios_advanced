@@ -65,6 +65,16 @@ final class OnboardingViewController: UIViewController {
         configureStackView()
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+//        let isLandscape = newCollection.verticalSizeClass == .compact
+//        if isLandscape {
+//            let viewController = OnboardingLandscapeViewController()
+//            navigationController?.pushViewController(viewController, animated: true)
+//        } else {
+//            navigationController?.popViewController(animated: true)
+//        }
+    }
 }
 
 //MARK: Layout configuration extension
