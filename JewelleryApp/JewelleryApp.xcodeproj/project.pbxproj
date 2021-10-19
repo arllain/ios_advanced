@@ -20,6 +20,8 @@
 		57A6EDF12715FACE003F0BF3 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6EDEF2715FACE003F0BF3 /* CardCollectionViewCell.swift */; };
 		57A6EDF22715FACE003F0BF3 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57A6EDF02715FACE003F0BF3 /* CardCollectionViewCell.xib */; };
 		57AA4A752718FFF3004884A7 /* OnboardingLandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA4A742718FFF3004884A7 /* OnboardingLandscapeViewController.swift */; };
+		57B4E647271AFC01004016B7 /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B4E645271AFC01004016B7 /* ProductPageViewController.swift */; };
+		57B4E648271AFC01004016B7 /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B4E646271AFC01004016B7 /* ProductPageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		57A6EDEF2715FACE003F0BF3 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		57A6EDF02715FACE003F0BF3 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		57AA4A742718FFF3004884A7 /* OnboardingLandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingLandscapeViewController.swift; sourceTree = "<group>"; };
+		57B4E645271AFC01004016B7 /* ProductPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageViewController.swift; sourceTree = "<group>"; };
+		57B4E646271AFC01004016B7 /* ProductPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductPageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		57A039BF27133EB40028A381 /* JewelleryApp */ = {
 			isa = PBXGroup;
 			children = (
+				57B4E644271AFBE1004016B7 /* ProductPage */,
 				57A6EDE32715C530003F0BF3 /* Home */,
 				57A4BC9F2714C99400CD73F1 /* Utils */,
 				57A039D52713491F0028A381 /* Feature */,
@@ -126,6 +131,15 @@
 				57A6EDF02715FACE003F0BF3 /* CardCollectionViewCell.xib */,
 			);
 			path = CardCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		57B4E644271AFBE1004016B7 /* ProductPage */ = {
+			isa = PBXGroup;
+			children = (
+				57B4E645271AFC01004016B7 /* ProductPageViewController.swift */,
+				57B4E646271AFC01004016B7 /* ProductPageViewController.xib */,
+			);
+			path = ProductPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A039CD27133EB50028A381 /* LaunchScreen.storyboard in Resources */,
+				57B4E648271AFC01004016B7 /* ProductPageViewController.xib in Resources */,
 				57A6EDF22715FACE003F0BF3 /* CardCollectionViewCell.xib in Resources */,
 				57A039CA27133EB50028A381 /* Assets.xcassets in Resources */,
 				57A039C827133EB40028A381 /* Main.storyboard in Resources */,
@@ -204,6 +219,7 @@
 				57A039C527133EB40028A381 /* ViewController.swift in Sources */,
 				57A039C127133EB40028A381 /* AppDelegate.swift in Sources */,
 				57A039C327133EB40028A381 /* SceneDelegate.swift in Sources */,
+				57B4E647271AFC01004016B7 /* ProductPageViewController.swift in Sources */,
 				57A4BCA12714C9BD00CD73F1 /* UIView+Extension.swift in Sources */,
 				57A6EDF12715FACE003F0BF3 /* CardCollectionViewCell.swift in Sources */,
 				57A039D82713496F0028A381 /* OnboardingViewController.swift in Sources */,

@@ -130,4 +130,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.configure(model: CardCollectionViewCellModel(imageName: "diamond_ring", title: "Diamond Ring", subtitle: "Pure ring with Diamonds (0.1400 Ct)", price: "600"))
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let productPageViewController =  ProductPageViewController(nibName: "ProductPageViewController", bundle: nil)
+        navigationController?.pushViewController(productPageViewController, animated: true)
+    }
 }
